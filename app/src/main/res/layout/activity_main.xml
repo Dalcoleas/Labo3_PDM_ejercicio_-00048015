@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="@dimen/padd"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre:"/>
+        android:text="@string/name"/>
 
     <EditText
         android:id="@+id/et_name"
@@ -20,21 +20,22 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/tv_last_name"
+        android:id="@+id/tv_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apellido:"/>
+        android:text="@string/password"/>
 
     <EditText
-        android:id="@+id/et_last_name"
+        android:id="@+id/et_pass"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"/>
 
     <TextView
         android:id="@+id/tv_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email:"/>
+        android:text="@string/email"/>
 
     <EditText
         android:id="@+id/et_email"
@@ -45,7 +46,7 @@
         android:id="@+id/tv_genero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Genero:"/>
+        android:text="@string/gender"/>
 
     <RadioGroup
         android:id="@+id/rg_selection"
@@ -56,13 +57,13 @@
             android:id="@+id/rb_male"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Masculino"/>
+            android:text="@string/male"/>
 
         <RadioButton
             android:id="@+id/rb_female"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Femenino"/>
+            android:text="@string/female"/>
     </RadioGroup>
 
     <Button
@@ -71,8 +72,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Send"/>
+        android:layout_marginTop="@dimen/padd"
+        android:text="@string/bt_send"/>
 
 
 </LinearLayout>

@@ -22,31 +22,36 @@ public class MainActivity extends AppCompatActivity {
 
     private RadioGroup mRadioGroup;
 
+    private String name, pass, email, gender;
+
+    private int id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mButton = findViewById(R.id.action_bt_send);
-        mEditText = findViewById(R.id.et_name);
-        mEditText1 = findViewById(R.id.et_last_name);
-        mEditText2 = findViewById(R.id.et_email);
+        this.mButton = findViewById(R.id.action_bt_send);
+        this.mEditText = findViewById(R.id.et_name);
+        this.mEditText1 = findViewById(R.id.et_pass);
+        this.mEditText2 = findViewById(R.id.et_email);
 
-        mRadioGroup = findViewById(R.id.rg_selection);
+        this.mRadioGroup = findViewById(R.id.rg_selection);
 
         mButton.setOnClickListener(v->{
-            String name = mEditText.getText().toString();
-            String lastName = mEditText1.getText().toString();
-            String email = mEditText2.getText().toString();
-            int selectedId = mRadioGroup.getCheckedRadioButtonId();
+            this.name = this.mEditText.getText().toString();
+            this.pass = this.mEditText1.getText().toString();
+            this.email = this.mEditText2.getText().toString();
 
-            mRadioButton = findViewById(selectedId);
+            this.id = this.mRadioGroup.getCheckedRadioButtonId();
 
-            String gender = mRadioButton.getText().toString();
+            this.mRadioButton = findViewById(this.id);
+
+            this.gender = this.mRadioButton.getText().toString();
 
             Intent mIntent = new Intent(MainActivity.this, SecondActivity.class);
             mIntent.putExtra(AppConstants.TEXT_NAME, name);
-            mIntent.putExtra(AppConstants.TEXT_LAST_NAME,lastName);
+            mIntent.putExtra(AppConstants.TEXT_PASS,pass);
             mIntent.putExtra(AppConstants.TEXT_MAIL, email);
             mIntent.putExtra(AppConstants.TEXT_GENDER,gender);
             startActivity(mIntent);
