@@ -6,73 +6,66 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nombre:"/>
 
-    <EditText
-        android:id="@+id/et_name"
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tv_nameG"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text=" "/>
 
     <TextView
-        android:id="@+id/tv_last_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Apellido:"/>
 
-    <EditText
-        android:id="@+id/et_last_name"
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tv_last_nameG"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text=" "/>
 
     <TextView
-        android:id="@+id/tv_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email:"/>
 
-    <EditText
-        android:id="@+id/et_email"
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tv_emailG"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text=" "/>
 
     <TextView
-        android:id="@+id/tv_genero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Genero:"/>
 
-    <RadioGroup
-        android:id="@+id/rg_selection"
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tv_generoG"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/rb_male"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Masculino"/>
-
-        <RadioButton
-            android:id="@+id/rb_female"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Femenino"/>
-    </RadioGroup>
+        android:layout_height="wrap_content"
+        android:text=" "/>
 
     <Button
-        android:id="@+id/action_bt_send"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Send"/>
-
+        android:text="Share"/>
 
 </LinearLayout>
